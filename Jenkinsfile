@@ -8,7 +8,11 @@ pipeline {
         }
         stage('Start') {
             steps {
-                sh 'ng serve'
+                script{
+                    withEnv(['JENKINS_NODE_COOKIE=dontKillMe']) {
+                        sh "nohup ng serve &"
+                    }
+                }
             }
         }
     }
