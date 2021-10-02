@@ -15,7 +15,7 @@ pipeline {
                 // Install required npm modules
                 sh 'npm install'
                 // Build the modules
-                sh 'npm run ng build'
+                sh 'ng build'
             }
         }
         stage('Start') {
