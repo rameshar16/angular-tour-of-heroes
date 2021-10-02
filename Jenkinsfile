@@ -10,6 +10,8 @@ pipeline {
         // Build stage
         stage('Build') {
             steps {
+                //Delete node_modules and package-lock.json to avoid the build failure
+                sh 'rm -rf node_modules/ package-lock.json'
                 // Install required npm modules
                 sh 'npm install'
                 // Build the modules
