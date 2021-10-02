@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'whoami'
                 sh 'rm -rf node_modules'
-                sh 'sudo npm install -g @angular/cli && sudo npm install -g @angular-devkit/build-angular && npm update && ng --version'
+                sh 'sudo npm install -g @angular/cli && sudo npm install -g @angular-devkit/build-angular && sudo npm update && ng --version'
                 sh 'ng build'
             }
         }
