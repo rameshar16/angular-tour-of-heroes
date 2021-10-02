@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo npm install -g @angular/cli && sudo npm install -g @angular-devkit/build-angular && ng --version'
-                sh 'ng build'
+                sh 'npm run ng build'
             }
         }
         stage('Start') {
