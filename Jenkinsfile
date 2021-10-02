@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'whoami'
-                sh 'rm -rf node_modules package-lock.json'
+                sh 'rm -rf node_modules'
                 sh 'npm install -g @angular/cli && ng --version'
                 sh 'ng build'
             }
